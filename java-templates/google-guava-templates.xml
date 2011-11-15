@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java" deleted="false" description="" enabled="true" name="filter">${retIt:newType(java.lang.Iterable)}&lt;${iterable_type}&gt; ${name:newName(retIt)} = ${itbls:newType(com.google.common.collect.Iterables)}.filter(${iterable}, new ${pred:newType(com.google.common.base.Predicate)}&lt;${iterable_type}&gt;() {&#13;
+   @Override public boolean apply(${iterable_type} ${input}) {&#13;
+       return ${false};&#13;
+   }            &#13;
+});</template><template autoinsert="true" context="java" deleted="false" description="" enabled="true" name="func">new ${fun:newType(com.google.common.base.Function)}&lt;${from_type}, ${to_type}&gt;() {&#13;
+    @Override public ${to_type} apply(${from_type} ${input}) {&#13;
+        return ${cursor};&#13;
+    }&#13;
+}</template><template autoinsert="true" context="java" deleted="false" description="" enabled="true" name="pred">new ${pred:newType(com.google.common.base.Predicate)}&lt;${type}&gt;() {&#13;
+   @Override public boolean apply(${type} ${input}) {&#13;
+       return ${cursor};&#13;
+   }            &#13;
+}</template><template autoinsert="true" context="java" deleted="false" description="" enabled="true" name="transform">${retIt:newType(java.lang.Iterable)}&lt;${to_type}&gt; ${name:newName(retIt)} = ${itbls:newType(com.google.common.collect.Iterables)}.transform(${iterable}, new ${fun:newType(com.google.common.base.Function)}&lt;${iterable_type}, ${to_type}&gt;() {&#13;
+    @Override public ${to_type} apply(${iterable_type} ${input}) {&#13;
+        return ${null};&#13;
+    }&#13;
+});</template></templates>
