@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="xml_tag" deleted="false" description="" enabled="true" name="changeset">&lt;changeSet id="${id}" author="${user}"&gt;&#13;
+        ${cursor}&#13;
+    &lt;/changeSet&gt;</template><template autoinsert="true" context="xml_tag" deleted="false" description="" enabled="true" name="createTable">&lt;createTable tableName="${tablename}"&gt;&#13;
+            &lt;column name="id" type="integer" autoIncrement="true"&gt;&#13;
+                &lt;constraints primaryKey="true" /&gt;&#13;
+            &lt;/column&gt;&#13;
+            &lt;column name="${col1}" type="${type}"&gt;&#13;
+                &lt;constraints nullable="true" /&gt;&#13;
+            &lt;/column&gt;&#13;
+        &lt;/createTable&gt;&#13;
+        &lt;modifySql dbms="mysql"&gt;&#13;
+            &lt;append value="$${createTable.mysql}" /&gt;&#13;
+        &lt;/modifySql&gt;</template></templates>
